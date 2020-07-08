@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/profilestayle.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/alluser.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('menu.ejs') -%> 
+    <br>
+    <div class="container" >
+      
+<form action="/sign" method="POST" class="formst signupform" >
+
+  <h5 style="color: azure;text-align: center;">Registration </h5>
+<div class="input-container">
+    <input type="text" required=""  name="name" value="<%=val.name%>"/>
+    <label>Name</label>	<span class="text-danger"><%= err.name %></span>	
+  </div>
+
+  <div class="input-container">
+    <input type="text" required=""  name="surname" value="<%=val.surname%>"/>
+    <label>Surame</label>	<span class="text-danger"><%= err.suename %></span>	
+  </div>
+
+
+  <div class="input-container">
+    <input type="text" required=""  name="age" value="<%=val.age%>"/>
+    <label>Age</label>	<span class="text-danger"><%= err.age %></span>	
+  </div>
+
+
+
+  <div class="input-container">		
+    <input type="mail" required="" name="email" value="<%=val.email%>"/>
+    <label>Email</label><span class="text-danger"><%= err.email %></span>
+  </div>
+
+  <div class="input-container">		
+    <input type="password" required="" name="password"/>
+    <label>Password</label><span class="text-danger"><%= err.password %></span>
+  </div>
+  <div class="input-container">		
+    <input type="password" required="" name="conpassword"/>
+    <label>ConfirmPassword</label><span class="text-danger"><%= err.conpassword %></span>
+  </div>
+
+ <br><div class="regbtn ">
+ <button  >Signup</button>
+ </div>
+</form>
+</div>
+
+</body>
+</html>

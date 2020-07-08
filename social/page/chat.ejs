@@ -1,0 +1,90 @@
+<!DOCTYPE html><html class=''>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+    <link rel="shortcut icon" type="image/x-icon" href="//production-assets.codepen.io/assets/favicon/favicon-8ea04875e70c4b0bb41da869e81236e54394d63638a1ef12fa558a4a835f1164.ico" />
+    <link rel="mask-icon" type="" href="//production-assets.codepen.io/assets/favicon/logo-pin-f2d2b6d2c61838f7e76325261b7195c27224080bc099486ddd6dccb469b8e8e6.svg" color="#111" />
+    <link rel="canonical" href="https://codepen.io/emilcarlsson/pen/ZOQZaV?limit=all&page=74&q=contact+" />
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700,300' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+ <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="../css/chat.css">
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.2/css/font-awesome.min.css'>
+</head><body>
+	<%- include('menu1.ejs'), {user:user} -%> 
+<br>
+<br>
+<br>
+<div id="frame">
+	<div id="sidepanel">
+		<div id="profile">
+			<div class="wrap">
+				<img id="profile-img" data-id="<%=user.id%>" src="<%=user.pic_url%>" class="online" alt="" style="height: 50px;" />
+				<p ><%=user.name%></p>
+				<i class="fa fa-chevron-down expand-button" aria-hidden="true"></i>
+
+				
+			</div>
+		</div>
+
+		<div id="contacts">
+			<ul>
+                <% friends.forEach(e=>{
+                      if(e.online==1){%> 
+                  <li class="contact active addchat" data-id=<%=e.id%>>
+					<div class="wrap">
+						<span class="contact-status online "></span>
+						<img src="<%=e.pic_url%>" alt="" style="height: 40px;" />
+						<div class="meta">
+							<p class="name"><%=e.name%> <%=e.surname%></p>
+							
+						</div>
+					</div>
+				</li>
+                    
+                     <%   }else { %> 
+
+				<li class="contact addchat"   data-id=<%=e.id%>>
+					<div class="wrap">
+						<span class="contact-status busy"></span>
+						<img src="<%=e.pic_url%>" alt="" style="height: 40px;" />
+						<div class="meta">
+							<p class="name"><%=e.name%> <%=e.surname%></p>
+						
+						</div>
+					</div>
+				</li>
+                   <%   } %>      
+               <%   }) %> 
+			</ul>
+		</div>
+
+	</div>
+	<div class="content">
+		<div class="contact-profile">
+			<img src="<%=user.pic_url%>" alt="" height="46px" />
+			<p><%=user.name%> <%=user.surname%></p>
+
+		</div>
+		<div class="messages">
+			<ul  id="messul">
+
+				
+			</ul>
+		</div>
+		<div class="message-input" id="show" style="display: none;">
+			<div class="wrap">
+			<input type="text" id="mestext" placeholder="Write your message..." />
+			<i class="fa fa-paperclip attachment" aria-hidden="true"></i>
+			<button class="submit" id="sbmitmess"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+<script src="../js/socketIo.js"></script>
+
+</html>

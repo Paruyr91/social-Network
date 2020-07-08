@@ -1,0 +1,317 @@
+.profcard{
+width: 32vh;
+background-color: white;
+
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+position: relative;
+margin-left: 20px;
+
+}
+
+
+
+.formstyle{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  
+}
+
+
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
+
+body{
+	
+	background-position: center;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+	min-height:100vh;
+	font-family: 'Noto Sans', sans-serif;
+}
+.text-center{
+	color:#fff;	
+	text-transform:uppercase;
+    font-size: 23px;
+    margin: -50px 0 30px 0;
+    display: block;
+    text-align: center;
+}
+.box{
+    background: rgba(154,57,163,1);
+    background: -moz-linear-gradient(-45deg, rgba(154,57,163,1) 0%, rgba(65,103,168,1) 100%);
+    background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(154,57,163,1)), color-stop(100%, rgba(65,103,168,1)));
+    background: -webkit-linear-gradient(-45deg, rgba(154,57,163,1) 0%, rgba(65,103,168,1) 100%);
+    background: -o-linear-gradient(-45deg, rgba(154,57,163,1) 0%, rgba(65,103,168,1) 100%);
+    background: -ms-linear-gradient(-45deg, rgba(154,57,163,1) 0%, rgba(65,103,168,1) 100%);
+    background: linear-gradient(135deg, rgba(154,57,163,1) 0%, rgba(65,103,168,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9a39a3', endColorstr='#4167a8', GradientType=1 );
+	border-radius:3px;
+	padding:10px 20px;
+}
+.input-container{
+	position:relative;
+	margin-bottom:25px;
+}
+.input-container label{
+	position:absolute;
+	top:0px;
+	left:0px;
+	font-size:16px;
+	color:#fff;	
+    
+	transition: all 0.5s ease-in-out;
+}
+.input-container input{ 
+  border:0;
+  border-bottom:1px solid #555;  
+  background:transparent;
+  width:100%;
+  padding:8px 0 5px 0;
+  font-size:16px;
+  color:#fff;
+}
+.input-container input:focus{ 
+ border:none;	
+ outline:none;
+ border-bottom:1px solid #e74c3c;	
+}
+.btn{
+	color:#fff;
+	background-color:#e74c3c;
+	outline: none;
+    border: 0;
+    color: #fff;
+	padding:10px 20px;
+	text-transform:uppercase;
+	
+	border-radius:2px;
+	cursor:pointer;
+	position:relative;
+}
+/*.btn:after{
+	content:"";
+	position:absolute;
+	background:rgba(0,0,0,0.50);
+	top:0;
+	right:0;
+	width:100%;
+	height:100%;
+}*/
+.input-container input:focus ~ label,
+.input-container input:valid ~ label{
+	top:-12px;
+	font-size:12px;
+	
+}
+
+.boxflex{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+.formst{
+    width:28vh;
+    padding-top: 30px;
+}
+
+
+
+.profstatus{
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    width: 98%;
+ 
+    border-radius: 10px;
+ margin-top: 10px;
+background-color: white;
+
+position: relative;
+}
+
+
+.profstatusgrid{
+
+    width: 100%;
+height:95vh;
+    overflow-y: scroll;
+    
+}
+.likebtn{
+    height:44px;
+    width: 60px;
+    border: none;
+    background: none;
+}
+.coment{
+    position: absolute;
+       height: 50px;
+      
+   top: 0;
+   right: 0;
+   left: 50%;
+   bottom: 0;
+   margin: 0 auto;
+    border: none;
+    background: none; 
+   
+    
+}
+
+.coment:hover{
+    text-decoration: underline;
+    color: mediumblue;
+}
+.comlike{
+width: 100%;
+position: relative;
+}
+.likecount{
+    font-size: 25px;
+}
+
+.likesvg{
+    height: 30px;
+    width: 40px;
+}
+.likespan{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 20px;
+}
+.comentcontainer{
+    height: 40vh;
+padding: 0 20px;
+overflow-y: scroll; 
+position: relative;
+}
+.comentuserimg{
+width: 45px;
+height: 45px;
+border-radius: 50%;
+margin-right: 10px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.comenttext{
+    background-color: rgba(136, 187, 241, 0.89);
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.comenttext>p{
+margin: 0;
+}
+.comenttext>span{
+font-size: 10px;
+}
+.comentuserdiv{
+    position: relative;
+    padding-top: 50px;
+}
+
+.comentuserspan{
+position: absolute;
+top: 15px;
+}
+
+.displaybtncoment{
+display: none;
+}
+.textinput{
+    height: 40px;
+    width: 80%;
+    resize: none;
+    background-color:rgba(136, 187, 241, 1) ;
+    border-radius: 5px;
+}
+.comentdiv{
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 10px 0;
+top: 0;
+left: 0;
+bottom: 0;
+right: 0;
+position: sticky;
+width: 100%;
+background-color: white;
+z-index: 10;
+padding-bottom: 10px;
+}
+.statususerimage{
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.stususer{
+    width: 100%;
+    display: flex;
+    
+    align-items: center;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+.divcomentouter{
+    position: relative;
+}
+.deletComent{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    bottom: 30px;
+    right: 10px;
+    border: none;
+    background: none;
+}
+.deletComent:hover{
+    background-color: honeydew;
+}
+
+.imgcontainer{
+    width:100%;
+    height: 270px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.reqcaed{
+ 
+    max-width: 250px;
+  
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.requestscontainer{
+    width: 80%;
+    background-color: white;
+    padding:20px 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.profconout{
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.profconin{
+      border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+}

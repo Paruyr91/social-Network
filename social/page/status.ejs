@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/media.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include('menu1.ejs') -%> <br><br><br>
+    <div class="adst">
+    <span>Add new status</span>
+<form action="/addStatus" method="POST"   enctype='multipart/form-data'>
+<textarea name="text" class="tectarea" style="resize: none; " ></textarea><br>
+<input type="file" name="image"><br>
+<button class="btn btn-warning">Add Status</button>
+</form>
+</div>
+
+
+<div class="statusconteiner " style="margin-top:30px;">
+<div class="statusgrid">
+ 
+
+<% for(let i=0;i<statuss.length;i++) { %>
+    
+
+    <div class="status" data-id='<%=statuss[i].pic_url %>' >
+            <h5 class="card-title"><%=user.name %> <%=user.surname %>  </h5>
+              <p class="card-text"><%=statuss[i].text %></p>
+
+  <% if(statuss[i].pic_url!=undefined){ %> 
+
+              <div class="trim">
+                   <img class="statusimage"src="<%=statuss[i].pic_url %>" alt="Card image" >
+              </div>
+          
+ <% }%>
+ <button class="btn btn-outline-primary  delbtn" data-id='<%=statuss[i].id %> ' >Delet</button>
+  </div>
+<% } %>
+
+</div>
+</div>
+</body>
+<Script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></Script>
+<script src="/js/profilAxios.js"></script>
+</html>

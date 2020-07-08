@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/alluser.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <%- include('menu1.ejs') -%> <br><br><br><br>
+
+
+
+<div class=" cardcontainer">
+    <% for(let i=0;i<usersarr.length;i++) { %>
+
+
+    <div class="card">
+        <div class="imgcontainer">
+         <img class="cardimg" src="<%=usersarr[i].pic_url %>" alt="John"  >
+         </div>
+         <br>
+         <a href="/guest/<%=usersarr[i].email%>"><b><%=usersarr[i].name  %>  <%=usersarr[i].surname  %> </b></a>
+         <p  data-id='<%=usersarr[i].id %> '   >
+           
+       
+              <button class="button" >Massege</button>
+              <button class="deletFriend button">Delet</button>
+ 
+       
+ 
+  </p>
+       </div>
+
+
+
+   
+
+      <% } %>
+
+</div>
+
+
+</body>
+<Script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></Script>
+<script src="/js/friendAxios.js"></script>
+</html>

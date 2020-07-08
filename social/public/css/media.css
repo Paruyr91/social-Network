@@ -1,0 +1,57 @@
+@media screen and (max-width:767px) {
+    .profconin {
+     width: 100%;
+display: none;
+margin: 0;
+padding: 0;
+    }
+    .imgcontainerprofil{
+        display: none;
+       
+        
+    }
+    .profconin>form{
+        position: absolute;
+     left: 50%;
+     top: 0;
+    }
+    .box{
+    width: 100%;
+    }
+  .profstatus{
+      width: 100%;
+  }
+  .col-md-5{
+      padding: 0;
+  }
+  .navbig{
+     height: auto;
+     display: flex;
+     justify-content: space-around;
+  }
+ .navul{
+    flex-direction: column;
+    align-items: stretch;
+ }
+.search-border{
+   width:30vh;
+}
+.buttons{
+    width: 50px;
+}
+.statusconteiner {
+position: unset;
+height: auto;
+}
+.adst{
+    width: 100%;
+    height: auto;
+}
+.statusgrid{
+    height: auto;
+    position: fixed;
+    top: 225px;
+    width: 100%;
+}
+
+  }
